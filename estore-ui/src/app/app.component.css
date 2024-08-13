@@ -1,0 +1,38 @@
+/* AppComponent's private CSS styles */
+h1 {
+  color: #4a0101;
+  margin-bottom: 1;
+  text-align: center;
+  font-family: Rockwell;
+  font-weight: bold;
+  font-size: 4.5vw;
+}
+.navbar{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 100%;
+}
+nav a {
+  padding: 1.25vw;
+  text-decoration: none;
+  margin-top: 10px;
+  background-color: #E6E0C0;
+  color: #4a0101;
+  border-radius: 4px;
+  border: 0.15vw solid black;
+  display:flex;
+  font-size: 2.25vw;
+  font-family: Rockwell;
+  font-weight: bold;
+  justify-content: center;
+}
+
+nav a:hover {
+  color: #E6E0C0;
+  background-color: #e84d4d;
+  font-weight: bolder;
+}
+nav a:active {
+  color: #E6E0C0;
+  background-color: #7a0f0f;
+}

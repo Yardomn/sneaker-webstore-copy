@@ -1,0 +1,32 @@
+/* LoginComponent's private CSS styles */
+.wrapper{
+  text-align: center;
+}
+label {
+    color: #4a0101;
+    font-weight: bold;
+  }
+  input {
+    font-size: 1em;
+    padding: .5rem;
+  }
+  .titles{
+    color: #4a0101
+  }
+  button {
+    margin-top: 20px;
+    background-color: #e84d4d;
+    color: #E6E0C0;
+    padding: 1rem;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  button:hover {
+    background-color: #7a0f0f;
+    text-decoration: underline;
+  }
+  button:disabled {
+    background-color: #eee;
+    color: #ccc;
+    cursor: auto;
+  }

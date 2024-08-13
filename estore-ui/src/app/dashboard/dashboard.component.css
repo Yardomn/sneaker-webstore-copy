@@ -1,0 +1,83 @@
+/* DashboardComponent's private CSS styles */
+
+h2 {
+    color: #4a0101;
+    text-align: center;
+    font-size: 3.25vw;
+    font-family: Rockwell;
+    font-weight: bold;
+  }
+  
+  .divider{
+    height: 5.5vw;
+  }
+
+  .products-menu {
+    padding: 0;
+    margin: 10pt;
+    max-width: 100%;
+    color: #E6E0C0;
+    position:relative;
+    z-index: 1;
+
+    /* flexbox */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  a {
+    background-color: #3f525c;
+    border: 0.15vw solid black;
+    border-radius: 5px;
+    padding: 1rem;
+    font-size: 1.5vw;
+    font-family: Rockwell;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    color: #E6E0C0;
+    text-align: center;
+    width: 100%;
+    min-width: 70px;
+    margin: .5rem auto;
+    box-sizing: border-box;
+    position:relative;
+    z-index: 1;
+    justify-content: center;
+  
+    /* flexbox */
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+  }
+  
+  @media (min-width: 600px) {
+    a {
+      background-color: #e84d4d;
+      width: 20%;
+      box-sizing: content-box;
+    }
+  }
+  
+  a:hover {
+    background-color: #7a0f0f;
+    font-weight: bold;
+  }
+
+  .wrapper{
+    position: relative;
+  }
+
+  .search-bar{
+    color: #4a0101;
+    position:relative;
+    z-index: 100;
+  }
+
+  /*
+    < we may have to add in search bar customization here >
+  */

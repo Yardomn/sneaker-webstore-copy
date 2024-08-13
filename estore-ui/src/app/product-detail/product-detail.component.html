@@ -1,0 +1,40 @@
+<div class="wrapper" *ngIf="product">
+    <!-- this displays each product and the information associated with it in a list-->
+    <h2 class = "titles">{{product.name | uppercase}} Details</h2>
+    
+    <div *ngIf="isAdmin">
+      <!--should the user be an admin, they amay view extra details about the shoes here-->
+      <label for="hero-name">Product name: </label>
+      <input id="product-name" [(ngModel)]="product.name" placeholder="product name"/>
+      <label for="product-price">Product price: </label>
+      <input id="product-name" [(ngModel)]="product.price" placeholder="product price"/>
+      <label for="product-price">Product quantity: </label>
+      <input id="product-name" [(ngModel)]="product.quantity" placeholder="product quantity"/>
+      <label for="product-price">Product description: </label>
+      <input id="product-name" [(ngModel)]="product.description" placeholder="product description"/>
+    </div>
+    <div *ngIf="!isAdmin" class="titles">
+      <!--If the user is not an admin, they may view the price and details here, but they are unable to make changes to the items-->
+      <h3>Product name: {{product.name}}</h3>
+      <div id="imagebox">{{getImage(product)}}</div>
+      <h3>Price: ${{product.price}}</h3>
+      <h3>Quantity: {{product.quantity}}</h3>
+      <h3>Description: {{product.description}}</h3>
+    </div>
+    <div *ngIf="isAdmin">
+      <!--If the user is an admin, they may make changes to the products as they wish here, but can not add items to the cart-->
+      <button type="button" (click)="goBack()">go back</button>
+      <button type="button" (click)="save()">save</button>
+      <button type="button" class="delete" title="delete product"
+      (click)="delete(product)">delete</button>
+    </div>
+    <div *ngIf="isLoggedIn && !isAdmin">
+      <!--If the user is logged in as a customer, they will be able to add items to the cart-->
+      <button type="button" (click)="goBack()">go back</button>
+      <button class="button" (click)="addToCart(product)">Add To Cart</button>
+    </div>
+    <div class = "titles"><span>id: </span>{{product.id}}</div>
+    <div *ngIf="!isLoggedIn">
+      <button type="button" (click)="goBack()">go back</button>
+    </div>
+</div>

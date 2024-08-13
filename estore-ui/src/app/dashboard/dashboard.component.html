@@ -1,0 +1,15 @@
+<h2>Dashboard</h2>
+<!--The homepage of the website-->
+<div class="wrapper">
+  <div class="search-bar">
+    <app-product-search></app-product-search>
+  </div>
+  <div class="divider"></div>
+  <div class="products-menu">
+    <a *ngFor="let product of products"
+      routerLink="/detail/{{product.id}}">
+      {{product.name}}<br>
+      ${{product.price}}
+    </a>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="wrapper" *ngIf="!hasCheckedOut">
+    <h1>Please select your method of payment</h1>
+
+    <h1> Total Cost from your pocket to ours: {{total | currency}}</h1>
+    
+    <button type="button" class="dining-button" (click)="checkout()">
+        Dining Dollars
+    </button>
+
+    <button type="button" class="momBucks-button" (click)="checkout()">
+        Mom Bucks
+    </button>
+</div>
+
+<div class="wrapper" *ngIf="hasCheckedOut">
+    <h1>Thank you for your purchase!</h1>
+    <h2>You may recieve your order</h2>
+    <h6>*Terms and Conditions apply</h6>
+    <button type="button" class="goHome-button" (click)="goToDashboard()">
+        Dashboard
+    </button>
+</div>

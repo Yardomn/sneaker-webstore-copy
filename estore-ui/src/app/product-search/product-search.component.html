@@ -1,0 +1,13 @@
+<div id="search-component" class="search-bar">
+  <!--The following allows the user to add search filters when looking for the desire shoe of their choice-->
+    <label for="search-box">Product Search</label>
+    <input #searchBox id="search-box" (input)="search(searchBox.value)" />
+  
+    <ul class="search-result">
+      <li *ngFor="let product of products$ | async" >
+        <a routerLink="/detail/{{product.id}}">
+          {{product.name}}
+        </a>
+      </li>
+    </ul>
+  </div>

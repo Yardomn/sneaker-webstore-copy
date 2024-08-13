@@ -1,0 +1,59 @@
+<!--Check to see if the user is a customer-->
+<div *ngIf="isLoggedIn && !isAdmin">
+  <div class="Cart-Container">
+    <div class="TOP">
+      <h3 class="heading">Shopping Cart</h3>
+    </div>
+    <!--Displays items in the cart-->
+    <div class="cart-item" *ngFor="let product of products">
+      <div class="about">
+        <h1 class="title"><span><strong>{{ product.name}}: </strong></span></h1>
+      </div>
+      <div class=”prices”>
+        <h1 class="title"><span><strong>{{ product.name}}: </strong></span></h1>
+        <h1 class="title"><span><strong>{{ product.quantity}}: </strong></span></h1>
+        <div class=”amount”><span>{{ product.price | currency }}<br></span></div>
+        <div class=”increment”><u><button class="button" (click)="addQuantity(product)"> + </button></u></div>
+        <div class=”remove”><u><button class="button" (click)="removeFromCart(product)">Remove From Cart</button></u></div>
+        <div class=”decrement”><u><button class="button" (click)="reduceQuantity(product)"> - </button></u></div>
+      </div>
+    </div>
+    <hr>
+    <div *ngIf="!isComplete" class="checkout">
+      <!--Discount code option-->
+      <input *ngIf="!isDiscount" class="text-field" type="text" id="dcode" name="dcode" placeholder="Discount Code"><br><br>
+      <div *ngIf="!isDiscount" ><button class="button" (click)="applyDiscountCode()">Apply Discount Code</button></div>
+      <div *ngIf="!isComplete && isDiscount"><p class="text">Discount code was applied successfully!</p><br></div>
+      <div *ngIf="!isComplete && isDiscount"><p class="text">Amount saved: {{amountSaved | currency}}</p><br></div>
+      <div>
+        <h3> Shipping Options: </h3>
+      <button  class = "button" (click)="applyNormalShipping()"> Normal Shipping (Default; no extra charge)</button>
+      <button  class = "button" (click)="applyExpediteShipping()"> Expedited Shipping (+ $5)</button>
+      <button  class= "button" (click)="applyPremiumShipping()"> Premium Shipping (+ $10)</button>
+      </div>
+      <div *ngIf="isShip == 0">
+        <h3>Current Shipping Choice: Normal (No Extra Charge added)</h3>
+      </div>
+      <div *ngIf="isShip == 1">
+        <h3>Current Shipping Choice: Expedite ($5 added to your total cost)</h3>
+      </div>
+      <div *ngIf="isShip == 2">
+        <h3>Current Shipping Choice: Premium ($10 added to your total cost)</h3>
+      </div>
+      <div class="total">
+        <div>Total:</div>
+      </div>
+      <div class="total-amount"><span>{{total | currency}}</span></div>
+      <div><button class="button" (click)="goToCheckout()">Checkout</button></div>
+    </div>
+    <div *ngIf="isComplete"><p class="text">Your order has been placed</p><br></div>
+  </div>
+</div>
+<!--Message to be printed if the user is not logged in-->
+<div *ngIf="isLoggedIn == false">
+  <h2 class = "titles">Please Log In to see cart!</h2>
+</div>
+<!--Message to be printed if the user(admin) can not use the cart-->
+<div *ngIf="isLoggedIn && isAdmin">
+  <h2 class = "titles">Cart not available to admin</h2>
+</div>

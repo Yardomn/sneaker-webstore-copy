@@ -1,0 +1,70 @@
+/* HeroSearch private styles */
+
+label {
+    color: #4a0101;
+    display: block;
+    font-weight: bold;
+    font-size: 1.2rem;
+    font-family: Rockwell;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+  
+  }
+  input {
+    background-color: #E6E0C0;
+    color: #4a0101;
+    padding: .5rem;
+    width: 12vw;
+    max-width: 600px;
+    box-sizing: border-box;
+    display: block;
+  }
+  
+  input:focus {
+    background-color: #E6E0C0;
+    color: #4a0101;
+    width: 12vw;
+    outline: black auto 1px;
+  }
+  
+  .search-bar{
+    position: absolute;
+    width: 12vw;
+  }
+
+  li {
+    color: #4a0101;
+    background-color: #E6E0C0;
+    list-style-type: none;
+    display:grid;
+    width: 12vw;
+    z-index: 100;
+  }
+  .search-result li a {
+    border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    /*display: inline-block;*/
+    width: 100%;
+    max-width: 600px;
+    padding: .5rem;
+    box-sizing: border-box;
+    text-decoration: none;
+    background-color: #E6E0C0;
+    color: #4a0101;
+    z-index: 100;
+  }
+  
+  .search-result li a:hover {
+    background-color: #e84d4d;
+    color: #E6E0C0;
+    text-decoration: underline;
+  }
+  
+  ul.search-result {
+    background-color: #E6E0C0;
+    color: #4a0101;
+    margin-top: 0;
+    padding-left: 0;
+  }

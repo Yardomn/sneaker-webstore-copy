@@ -1,0 +1,29 @@
+<div class="wrapper" *ngIf="isLoggedIn == false">
+  <h2 class = "titles">Login:</h2>
+  <div>
+      <label for="new-user">New User: </label>
+      <input id="new-user" #userName />
+  
+      <!-- (click) passes input value to add() and then clears the input -->
+      <button type="button" class="add-button" (click)="add(userName.value); userName.value=''">
+        Add User
+      </button>
+  </div>
+
+  <div>
+      <label for="returning-user">Login: </label>
+      <input id="returning-user" #username />
+  
+      <!-- (click) passes input value to login() and then clears the input -->
+      <button type="button" class="search-button" (click)="login(username.value); username.value=''">
+        Login
+      </button>
+  </div>
+</div>
+
+<div *ngIf="isLoggedIn">
+  <h2 class = "titles">Logout:</h2>
+  <button type="button" class="logout-button" (click)="logout()">
+    Logout
+  </button>
+</div>

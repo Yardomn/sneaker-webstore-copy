@@ -1,0 +1,21 @@
+<h2 class = "titles">Products</h2>
+
+<div *ngIf="isAdmin" class = "titles">
+  <label for="new-product">Product name: </label>
+  <input id="new-product" #productName />
+
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button type="button" class="add-button" (click)="add(productName.value); productName.value=''">
+    Add product
+  </button>
+</div>
+
+<ul class="products">
+  <li *ngFor="let product of products">
+    <a routerLink="/detail/{{product.id}}" class = "titles">
+      <span class="badge">{{product.id}}</span> {{product.name}} <span class="badge">price : {{  product.price  }}</span>
+      <span class="badge">quantity : {{  product.quantity  }}</span>
+      <span class="badge">description : {{  product.description  }}</span>  
+    </a>
+  </li>
+</ul>

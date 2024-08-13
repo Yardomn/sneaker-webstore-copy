@@ -1,0 +1,100 @@
+/* HeroesComponent's private CSS styles */
+.products {
+    color: #4a0101;
+    margin: 0 0 2em 0;
+    list-style-type: none;
+    padding: 0;
+    width: 60em;
+}
+  .titles{
+    color: #4a0101
+  }
+  input {
+    display: block;
+    width: 100%;
+    padding: .5rem;
+    margin: 1rem 0;
+    box-sizing: border-box;
+  }
+  
+  .heroes li {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .products li:hover {
+    left: .1em;
+  }
+  
+  .products a {
+    color: #000;
+    background-color: #cfcfcf; /* make this a very light red? */
+    text-decoration: none;
+    margin: .5em;
+    padding: .3em 0;
+    height: 1.6em;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+  }
+  
+  .products a:hover {
+    color: #eee;
+    background-color: #e84d4d;
+    text-decoration: underline;
+  }
+  
+  .products a:active {
+    background-color: #525252;
+    color: #fafafa;
+  }
+  
+  .products .badge {
+    color: #eee;
+    background-color: #7a0f0f;
+    display: inline-block;
+    font-size: small;
+    font: Rockwell;
+    padding: 0.8em 0.7em 0 0.7em;
+    line-height: 1em;
+    position: relative;
+    left: -1px;
+    top: -4px;
+    height: 1.8em;
+    min-width: 16px;
+    text-align: right;
+    margin-right: .8em;
+    border-radius: 4px 0 0 4px;
+  }
+  
+  .add-button {
+    color: #eee;
+    background-color: #696969;
+   padding: .5rem 1.5rem;
+   font-size: 1rem;
+   font: Rockwell;
+   margin-bottom: 2rem;
+  }
+  
+  .add-button:hover {
+    color: white;
+    background-color: #e84d4d;
+  }
+  
+  button.delete {
+    position: absolute;
+    left: 210px;
+    top: 5px;
+    background-color: white;
+    color:  #525252;
+    font-size: 1.1rem;
+    font-family: Rockwell;
+    font-weight: bold;
+    margin: 0;
+    padding: 1px 10px 3px 10px;
+  }
+  
+  button.delete:hover {
+    background-color: #525252;
+    color: white;
+  }

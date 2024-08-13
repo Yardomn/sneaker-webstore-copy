@@ -1,0 +1,32 @@
+/* CheckoutComponent's private CSS styles */
+label {
+    color: #435960;
+    font-weight: bold;
+    text-align: center;
+  }
+  input {
+    font-size: 1em;
+    padding: .5rem;
+    text-align: center;
+  }
+  .wrapper{
+    text-align: center;
+    color: #4a0101;
+  }
+  button {
+    margin-top: 20px;
+    background-color: #e84d4d;
+    border: 0.15vw solid black;
+    padding: 1rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    text-align: center;
+  }
+  button:hover {
+    background-color: #7a0f0f;
+  }
+  button:disabled {
+    background-color: #eee;
+    color: #ccc;
+    cursor: auto;
+  }

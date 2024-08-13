@@ -1,0 +1,225 @@
+.center{
+  float: left;
+  text-align: center;
+  margin: -35px 0 0 0 ;
+  width: 33.33%;
+  padding: 10px;
+}
+.titles{
+  color: #4a0101
+}
+
+.flex-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+nav a button{
+  width: 300px;
+}
+
+.cart-item{
+  padding: 10px;
+}
+
+.header {
+  overflow: hidden;
+  padding: 20px 10px;
+}
+
+header img{
+  width: 20%;
+  text-align: center;
+}
+
+/* Style the header links */
+.header a {
+  float: left;
+  color: #4a0101;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/* Change the background color on mouse-over */
+.header a:hover {
+  background-color: #ddd;
+  color: #4a0101;
+}
+
+/* Style the active/current link*/
+
+/* Float the link section to the right */
+.header-right {
+  float: right;
+}
+
+a {
+  color: #4a0101;
+  border-radius: 2px;
+  padding: 1rem;
+  font-size: 1.2rem;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  min-width: 70px;
+  margin: .5rem auto;
+  box-sizing: border-box;
+
+  /* flexbox */
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+}
+
+@media (min-width: 600px) {
+  a {
+    width: 18%;
+    box-sizing: content-box;
+  }
+}
+
+/* test */
+
+body{
+  color: #4a0101;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ .Cart-Container{
+  margin-top: 20px;
+  width: 70%;
+  height: 85%;
+  background-color: #E6E0C0;
+  border-radius: 20px;
+  box-shadow: 0px 25px 40px #E44C4C;
+ }
+
+ .TOP{
+  font-family: Rockwell;
+  margin: auto;
+  width: 90%;
+  height: 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+ .heading{
+  font-size: 30px;
+  font-weight: 700;
+  color: #4a0101;
+ }
+
+ .action{
+  font-size: 14px;
+  font-family: 'Open Sans';
+  font-weight: 600;
+  color: #E44C4C;
+  cursor: pointer;
+  border-bottom: 1px solid #E44C4C;
+ }
+
+ .cart-item{
+  margin: auto;
+  width: 90%;
+  height: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+ .image-box{
+  width: 15%;
+  text-align: center;
+ }
+ .about{
+  height: 100%;
+ }
+ .title{
+  padding-top: 5px;
+  line-height: 10px;
+  font-size: 32px;
+  font-family: 'Open Sans';
+  font-weight: 800;
+ }
+ .subtitle{
+  line-height: 10px;
+  font-size: 18px;
+  font-family: 'Open Sans';
+  font-weight: 600;
+  color: #909090;
+ }
+
+ hr{
+  width: 66%;
+  float: right;
+  margin-right: 5%;
+ }
+ .checkout{
+  float: right;
+  margin-right: 5%;
+  width: 28%;
+ }
+ .total{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+ }
+ .Subtotal{
+  font-size: 22px;
+  font-family: ‘Open Sans’;
+  font-weight: 700;
+  color: #202020;
+ }
+ .items{
+  font-size: 16px;
+  font-family: ‘Open Sans’;
+  font-weight: 500;
+  color: #909090;
+  line-height: 10px;
+ }
+ .total-amount{
+  font-size: 36px;
+  font-family: ‘Open Sans’;
+  font-weight: 900;
+  color: #202020;
+ }
+ .button{
+    margin-top: 5px;
+    background-color: #e84d4d;
+    color: #E6E0C0;
+    padding: 1rem;
+    border-radius: 4px;
+    font-size: 1rem;
+ }
+
+ input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+ }
