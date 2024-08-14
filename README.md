@@ -1,7 +1,3 @@
-# E-Store:  _____ Video Store _____
-# Modify this document to expand any and all sections that are applicable for a better understanding from your users/testers/collaborators (remove this comment and other instructions areas for your FINAL release)
-
-An online E-store system built in Java 11=> and ___ _replace with other platform requirements_ ___
   
 ## Team
 
@@ -14,7 +10,6 @@ An online E-store system built in Java 11=> and ___ _replace with other platform
 
 - Java 8=>11 (Make sure to have correct JAVA_HOME setup in your environment)
 - Maven
--  _add any other tech stack requirements_
 
 
 ## How to run it
@@ -46,7 +41,6 @@ To run tests on all the tiers in isolation do this:
 3. To view the Model tier tests open in your browser the file at `PROJECT_API_HOME/target/site/jacoco/model/index.html`
 4. To view the Persistence tier tests open in your browser the file at `PROJECT_API_HOME/target/site/jacoco/model/index.html`
 
-*(Consider using `mvn clean verify` to attest you have reached the target threshold for coverage)
 
 ## License
 
